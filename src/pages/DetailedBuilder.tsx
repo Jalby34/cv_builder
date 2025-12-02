@@ -11,13 +11,13 @@ import {
 } from 'lucide-react';
 import { useCVStore } from '../store/cvStore';
 import { aiService } from '../services/aiService';
-import { CVData, Experience, Education, Skill, Project } from '../types/cv';
+import { CVData, Experience } from '../types/cv';
 
 type BuildStep = 'personal' | 'summary' | 'experience' | 'education' | 'skills' | 'projects' | 'review';
 
 const DetailedBuilder = () => {
   const navigate = useNavigate();
-  const { setCurrentCV, addSuggestion } = useCVStore();
+  const { setCurrentCV } = useCVStore();
   const [currentStep, setCurrentStep] = useState<BuildStep>('personal');
   const [aiLoading, setAiLoading] = useState(false);
 

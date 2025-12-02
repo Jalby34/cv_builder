@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Search, Briefcase, MapPin, TrendingUp, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Search, Briefcase, MapPin, TrendingUp } from 'lucide-react';
 
 const JobFinder = () => {
   const navigate = useNavigate();

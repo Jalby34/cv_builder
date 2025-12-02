@@ -6,13 +6,11 @@ import {
   Sparkles,
   Check,
   X,
-  AlertCircle,
   TrendingUp,
   FileText,
 } from 'lucide-react';
 import { useCVStore } from '../store/cvStore';
 import { aiService } from '../services/aiService';
-import { AISuggestion } from '../types/cv';
 
 const CVCustomizer = () => {
   const navigate = useNavigate();
@@ -28,7 +26,6 @@ const CVCustomizer = () => {
 
   const [loading, setLoading] = useState(false);
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
-  const [showSuggestions, setShowSuggestions] = useState(true);
 
   useEffect(() => {
     if (currentCV) {
